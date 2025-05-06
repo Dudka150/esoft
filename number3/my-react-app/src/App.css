@@ -1,0 +1,353 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.app-container {
+  min-height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.app-container.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.app-container.dark {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.memo-demo {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.memo-controls {
+  margin: 1rem 0;
+}
+
+.memo-components {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.memo-component {
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  flex: 1;
+  max-width: 300px;
+}
+
+.memo-info {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.task-manager {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.task-form {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.task-form input {
+  padding: 8px 16px;
+  font-size: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: inherit;
+  flex: 1;
+  max-width: 400px;
+}
+
+.filter-controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.filter-controls button {
+  padding: 8px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s;
+}
+
+.filter-controls button.active {
+  background-color: #646cff;
+}
+
+.tasks {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.task-item.completed .task-text {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.task-text {
+  cursor: pointer;
+  flex: 1;
+  text-align: left;
+  margin-right: 1rem;
+}
+
+.delete-btn {
+  padding: 4px 8px;
+  font-size: 14px;
+  background-color: rgba(255, 0, 0, 0.2);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+  background-color: rgba(255, 0, 0, 0.3);
+}
+
+.input-focus {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.input-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.input-container input {
+  padding: 8px 16px;
+  font-size: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: inherit;
+}
+
+.values-container {
+  margin: 1rem 0;
+}
+
+.values-container p {
+  margin: 0.5rem 0;
+}
+
+.values-container strong {
+  color: #646cff;
+}
+
+.todo-list {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.todo-form {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.todo-form input {
+  padding: 8px 16px;
+  font-size: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: inherit;
+  flex: 1;
+  max-width: 400px;
+}
+
+.todos {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.todo-item.completed .todo-text {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.todo-text {
+  cursor: pointer;
+  flex: 1;
+  text-align: left;
+  margin-right: 1rem;
+}
+
+.number-list {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.numbers-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.number-item {
+  padding: 0.5rem 1rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.sum-container {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+.sum-container strong {
+  color: #646cff;
+}
+
+.counter-list {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.counter-list h2 {
+  margin-bottom: 1rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.buttons button {
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+  opacity: 0.9;
+}
+
+.counter-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.counter-list li {
+  padding: 8px;
+  margin: 4px 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
